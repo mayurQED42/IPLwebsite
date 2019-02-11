@@ -1,0 +1,22 @@
+uuid: bd1e8d7f-baa6-4eb5-9b46-4e45fef18e8d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - premier_league
+_core:
+  default_config_hash: 6F33cUJuWVjz056v0POoTfxmazAOsajCJuvF-h7D1TE
+id: premier_league_messages
+theme: premier_league
+region: message
+weight: -100
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,26 @@
+uuid: ea4b74d4-e2d3-4443-989d-991f162c34ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - premier_league
+_core:
+  default_config_hash: t1JNLeeniHA8No5P4eb-UqNuKiiUYCqwQou7gHUyarg
+id: premier_league_main_menu
+theme: premier_league
+region: header
+weight: 10
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+visibility: {  }

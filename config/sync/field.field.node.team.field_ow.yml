@@ -1,0 +1,19 @@
+uuid: ec8e1259-2452-411d-b654-3cc942123028
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ow
+    - node.type.team
+id: node.team.field_ow
+field_name: field_ow
+entity_type: node
+bundle: team
+label: 'owner name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

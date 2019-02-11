@@ -1,0 +1,30 @@
+uuid: 56963af5-845d-473e-baa5-2df76cc71190
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_role
+field_name: field_role
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: batsman
+      label: batsman
+    -
+      value: baller
+      label: baller
+    -
+      value: all-rounder
+      label: all-rounder
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

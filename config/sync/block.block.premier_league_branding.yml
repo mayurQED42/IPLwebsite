@@ -1,0 +1,25 @@
+uuid: 38eed879-c55d-4238-bb93-400641325f28
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - premier_league
+_core:
+  default_config_hash: FShX_EAsUfEE1mZQK2-qZ5y4WFlFzyDqgdQ8iTFogQg
+id: premier_league_branding
+theme: premier_league
+region: logo
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

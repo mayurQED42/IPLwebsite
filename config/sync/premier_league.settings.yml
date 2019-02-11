@@ -1,0 +1,36 @@
+copyright_text: 'Footer copyright'
+slideshow_display: 1
+slide_title_1: 'mumbai indians as winner'
+slide_title_2: 'chennai as winner'
+slide_title_3: 'Our Service 3'
+slide_url_1: ''
+slide_url_2: ''
+slide_url_3: ''
+show_social_icon: 0
+facebook_url: 'https://www.facebook.com'
+google_plus_url: 'https://plus.google.com'
+twitter_url: 'https://twitter.com'
+linkedin_url: 'https://www.linkedin.com'
+pinterest_url: 'https://www.pinterest.com'
+fly_text: 'Test fly text'
+show_flytext: 1
+_core:
+  default_config_hash: mDnTaMth5chJGOFv_SFDZAPTQHle7ozOlzYkBW5uSaU
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 1
+favicon:
+  use_default: 1
+premier_league_color: normal
+rss_url: ''
+fly_image: {  }
+slide_image_1: {  }
+slide_alt_title_1: ''
+slide_image_2: {  }
+slide_alt_title_2: ''
+slide_image_3: {  }
+slide_alt_title_3: ''

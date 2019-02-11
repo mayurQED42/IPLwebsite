@@ -1,0 +1,14 @@
+uuid: ffb8086d-67fb-48f2-ab86-4a060336e0cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.teamadmin
+  module:
+    - user
+id: user_remove_role_action.teamadmin
+label: 'Remove the teamAdmin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: teamadmin

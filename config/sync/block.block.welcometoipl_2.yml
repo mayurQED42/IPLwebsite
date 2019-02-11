@@ -1,0 +1,25 @@
+uuid: 48789f0c-8f5e-4515-9a10-8f2da03ade0f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bc48bdbf-23ce-4068-b079-327fdc920782'
+  module:
+    - block_content
+  theme:
+    - premier_league
+id: welcometoipl_2
+theme: premier_league
+region: sidebar_right
+weight: 0
+provider: null
+plugin: 'block_content:bc48bdbf-23ce-4068-b079-327fdc920782'
+settings:
+  id: 'block_content:bc48bdbf-23ce-4068-b079-327fdc920782'
+  label: 'Welcome To IPL'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

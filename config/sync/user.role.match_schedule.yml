@@ -1,0 +1,18 @@
+uuid: d56d5807-897d-4a4f-b556-f9fc34c4dbac
+langcode: en
+status: true
+dependencies: {  }
+id: match_schedule
+label: 'Match schedule'
+weight: 4
+is_admin: null
+permissions:
+  - 'change own username'
+  - 'create schedule content'
+  - 'delete any schedule content'
+  - 'delete own schedule content'
+  - 'delete schedule revisions'
+  - 'edit any schedule content'
+  - 'edit own schedule content'
+  - 'revert schedule revisions'
+  - 'view schedule revisions'

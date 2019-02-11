@@ -1,0 +1,23 @@
+uuid: f1a6b395-6286-4bd1-b12e-c13b2c77bfe4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_wickets
+    - node.type.player
+id: node.player.field_wickets
+field_name: field_wickets
+entity_type: node
+bundle: player
+label: wickets
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

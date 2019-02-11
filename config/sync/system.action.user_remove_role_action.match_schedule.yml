@@ -1,0 +1,14 @@
+uuid: 0eb2e287-e2af-4a01-8bd1-6ea6ebb7edfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.match_schedule
+  module:
+    - user
+id: user_remove_role_action.match_schedule
+label: 'Remove the Match schedule role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: match_schedule

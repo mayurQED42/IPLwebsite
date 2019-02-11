@@ -1,0 +1,20 @@
+uuid: 8e5ef211-d78f-4e12-8a5a-2186f0d9e433
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_wickets
+field_name: field_wickets
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

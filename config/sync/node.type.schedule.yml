@@ -1,0 +1,18 @@
+uuid: e386f5c0-c427-43e2-91b5-7431b05c3cd9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: schedule
+type: schedule
+description: 'matches date time all data.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

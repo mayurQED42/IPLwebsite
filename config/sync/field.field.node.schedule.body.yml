@@ -1,0 +1,22 @@
+uuid: 24e29287-98d0-4a55-91f1-1e7ee7628b49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.schedule
+  module:
+    - text
+id: node.schedule.body
+field_name: body
+entity_type: node
+bundle: schedule
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

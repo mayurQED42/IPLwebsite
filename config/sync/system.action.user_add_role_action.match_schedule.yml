@@ -1,0 +1,14 @@
+uuid: cc881856-479d-4bfe-8dae-d2c9d350341a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.match_schedule
+  module:
+    - user
+id: user_add_role_action.match_schedule
+label: 'Add the Match schedule role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: match_schedule

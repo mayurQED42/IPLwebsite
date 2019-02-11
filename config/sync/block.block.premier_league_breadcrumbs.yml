@@ -1,0 +1,22 @@
+uuid: eab53f1c-0bfd-4b44-ba5d-ce0f049f0bd0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - premier_league
+_core:
+  default_config_hash: DiW7poB6c73PD0VXKxp97wOhtHPDmjFMNUnRMu_U0zM
+id: premier_league_breadcrumbs
+theme: premier_league
+region: breadcrumb
+weight: -100
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

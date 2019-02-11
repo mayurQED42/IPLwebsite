@@ -1,0 +1,33 @@
+uuid: 8d28f291-bab2-4095-8b66-c8459f98524b
+langcode: en
+status: true
+dependencies: {  }
+id: teamadmin
+label: teamAdmin
+weight: 3
+is_admin: null
+permissions:
+  - 'access in-place editing'
+  - 'change own username'
+  - 'create article content'
+  - 'create news content'
+  - 'create page content'
+  - 'delete all revisions'
+  - 'delete any news content'
+  - 'delete article revisions'
+  - 'delete news revisions'
+  - 'delete own news content'
+  - 'delete page revisions'
+  - 'edit any news content'
+  - 'edit any team content'
+  - 'edit own article content'
+  - 'edit own news content'
+  - 'edit own team content'
+  - 'revert all revisions'
+  - 'revert article revisions'
+  - 'revert news revisions'
+  - 'revert page revisions'
+  - 'view all revisions'
+  - 'view article revisions'
+  - 'view news revisions'
+  - 'view own unpublished content'

@@ -1,0 +1,22 @@
+uuid: a0f11d0e-9709-43ec-87b1-406685233781
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - premier_league
+_core:
+  default_config_hash: '-ZsM1Sr2YziNIqElot-eRloYbRcvPK53mjiG6ds7Y0I'
+id: premier_league_powered
+theme: premier_league
+region: no_region
+weight: -10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

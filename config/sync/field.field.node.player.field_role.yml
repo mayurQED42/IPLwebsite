@@ -1,0 +1,21 @@
+uuid: 508cd3d3-a6ae-4c77-a0c5-bda4dcd9093b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_role
+    - node.type.player
+  module:
+    - options
+id: node.player.field_role
+field_name: field_role
+entity_type: node
+bundle: player
+label: role
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: bafdac5a-936e-4696-8928-292490843426
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mat
+    - node.type.schedule
+id: node.schedule.field_mat
+field_name: field_mat
+entity_type: node
+bundle: schedule
+label: 'match no'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,14 @@
+uuid: 518db2ff-8321-414d-9a4b-7516b2cf76c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.teamadmin
+  module:
+    - user
+id: user_add_role_action.teamadmin
+label: 'Add the teamAdmin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: teamadmin

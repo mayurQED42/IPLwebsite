@@ -1,0 +1,20 @@
+uuid: f8d31ccb-8152-42f5-b56b-06ba2efe93b8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - premier_league
+_core:
+  default_config_hash: Dpt945ddU6OQ6z6L2Egnd-UFZee1c7MSJeUQnSbLyPU
+id: premier_league_page_title
+theme: premier_league
+region: title
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

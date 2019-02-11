@@ -1,0 +1,24 @@
+uuid: d4ba4af4-7498-4adf-a1a5-b96120e25345
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.myschedule
+  module:
+    - views
+  theme:
+    - bartik
+id: views_block__myschedule_block_1
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:myschedule-block_1'
+settings:
+  id: 'views_block:myschedule-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

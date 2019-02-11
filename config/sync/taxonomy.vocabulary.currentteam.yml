@@ -1,0 +1,9 @@
+uuid: c27ed2de-f1fe-4f47-be9f-f605e1bb6408
+langcode: en
+status: true
+dependencies: {  }
+name: currentTeam
+vid: currentteam
+description: 'team name'
+hierarchy: 0
+weight: 0

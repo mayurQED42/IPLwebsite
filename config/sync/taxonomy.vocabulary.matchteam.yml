@@ -1,0 +1,9 @@
+uuid: 66dc5844-92a1-439d-a48e-4f4e5a822752
+langcode: en
+status: true
+dependencies: {  }
+name: matchTeam
+vid: matchteam
+description: 'match team'
+hierarchy: 0
+weight: 0

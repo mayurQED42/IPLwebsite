@@ -1,0 +1,137 @@
+uuid: 7c66d474-8d9d-4274-8ad6-72c6543628bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.player.body
+    - field.field.node.player.field_birth_place
+    - field.field.node.player.field_born
+    - field.field.node.player.field_country
+    - field.field.node.player.field_height
+    - field.field.node.player.field_match
+    - field.field.node.player.field_pimage
+    - field.field.node.player.field_ptype
+    - field.field.node.player.field_role
+    - field.field.node.player.field_runs
+    - field.field.node.player.field_team
+    - field.field.node.player.field_wickets
+    - image.style.thumbnail
+    - node.type.player
+  module:
+    - image
+    - options
+    - text
+    - user
+id: node.player.teaser
+targetEntityType: node
+bundle: player
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 9
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_birth_place:
+    type: string
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_born:
+    type: text_default
+    weight: 3
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_country:
+    type: entity_reference_label
+    weight: 11
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_height:
+    type: number_decimal
+    weight: 4
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_match:
+    type: number_integer
+    weight: 5
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_pimage:
+    type: image
+    weight: 1
+    region: content
+    label: above
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+  field_ptype:
+    type: entity_reference_label
+    weight: 12
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_role:
+    type: list_default
+    weight: 6
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_runs:
+    type: number_integer
+    weight: 7
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_team:
+    type: entity_reference_label
+    weight: 10
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_wickets:
+    type: number_integer
+    weight: 8
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

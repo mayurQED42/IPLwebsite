@@ -1,0 +1,29 @@
+uuid: 0b62fde7-876c-406a-bb2c-d98bb54ab18d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_match_team
+    - node.type.schedule
+    - taxonomy.vocabulary.matchteam
+id: node.schedule.field_match_team
+field_name: field_match_team
+entity_type: node
+bundle: schedule
+label: 'match team'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      matchteam: matchteam
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
