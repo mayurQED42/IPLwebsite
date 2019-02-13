@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.player.body
+    - field.field.node.player.field_author
     - field.field.node.player.field_birth_place
     - field.field.node.player.field_born
     - field.field.node.player.field_country
@@ -41,6 +42,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_author:
+    weight: 133
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_birth_place:
     weight: 123
     settings:

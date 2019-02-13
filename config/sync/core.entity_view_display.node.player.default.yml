@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.player.body
+    - field.field.node.player.field_author
     - field.field.node.player.field_birth_place
     - field.field.node.player.field_born
     - field.field.node.player.field_country
@@ -33,6 +34,14 @@ content:
     weight: 8
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_author:
+    weight: 13
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_birth_place:
     weight: 3

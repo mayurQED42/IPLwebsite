@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.player.body
+    - field.field.node.player.field_author
     - field.field.node.player.field_birth_place
     - field.field.node.player.field_born
     - field.field.node.player.field_country
@@ -36,6 +37,14 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  field_author:
+    type: entity_reference_label
+    weight: 13
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
   field_birth_place:
     type: string
     weight: 2
