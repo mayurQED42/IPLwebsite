@@ -1,0 +1,15 @@
+uuid: 9aa66aaf-922a-4685-81cc-6175cf8efebd
+langcode: en
+status: true
+dependencies: {  }
+name: teamlogostyle
+label: 'teamlogoStyle 150*150'
+effects:
+  b5de910e-3a1d-4a7a-a67d-0473526a522b:
+    uuid: b5de910e-3a1d-4a7a-a67d-0473526a522b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 150
+      height: 150
+      anchor: center-center

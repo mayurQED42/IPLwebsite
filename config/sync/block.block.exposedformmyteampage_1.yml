@@ -1,0 +1,23 @@
+uuid: 635a7817-d3d9-4808-b352-d051695f3e53
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.myteam
+  module:
+    - views
+  theme:
+    - bartik
+id: exposedformmyteampage_1
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:myteam-page_1'
+settings:
+  id: 'views_exposed_filter_block:myteam-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility: {  }

@@ -1,17 +1,18 @@
-uuid: 56ef486e-635a-4345-95d5-058f5794daba
+uuid: aae3954a-d0e3-4c00-93f1-c7b4bcd30d31
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - field.storage.node.field_pimage
+    - image.style.teamlogostyle
+    - node.type.player
     - system.menu.main
-    - taxonomy.vocabulary.currentteam
   module:
+    - image
     - node
-    - taxonomy
     - user
-id: mydisplay
-label: MyDisplay
+id: photo_gallery
+label: 'photo gallery'
 module: views
 description: ''
 tag: ''
@@ -57,9 +58,6 @@ display:
           offset: 0
           id: 0
           total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -68,12 +66,22 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          tags:
+            previous: ‹‹
+            next: ››
       style:
-        type: default
-      row:
-        type: 'entity:node'
+        type: grid
         options:
-          view_mode: teaser
+          grouping: {  }
+          columns: 2
+          automatic_width: true
+          alignment: horizontal
+          col_class_default: true
+          col_class_custom: ''
+          row_class_default: true
+          row_class_custom: ''
+      row:
+        type: fields
       fields:
         title:
           id: title
@@ -122,133 +130,91 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-      filters:
-        status:
-          id: status
-          table: node_field_data
-          field: status
+        field_pimage:
+          id: field_pimage
+          table: node__field_pimage
+          field: field_pimage
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '='
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: teamlogostyle
+            image_link: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      filters:
+        status:
           value: '1'
-          group: 1
-          exposed: true
-          expose:
-            use_operator: false
-            operator: status_op
-            identifier: status
-            label: 'Published status'
-            description: null
-            remember: false
-            multiple: false
-            required: true
-            operator_id: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+          table: node_field_data
+          field: status
           plugin_id: boolean
           entity_type: node
           entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
         type:
           id: type
           table: node_field_data
           field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: type_op
-            label: 'Content type'
-            description: ''
-            use_operator: false
-            operator: type_op
-            identifier: type
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              teamadmin: '0'
-              match_schedule: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+          value:
+            player: player
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_team_target_id:
-          id: field_team_target_id
-          table: node__field_team
-          field: field_team_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_team_target_id_op
-            label: 'team (field_team)'
-            description: ''
-            use_operator: false
-            operator: field_team_target_id_op
-            identifier: field_team_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              teamadmin: '0'
-              match_schedule: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: textfield
-          limit: true
-          vid: currentteam
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
       sorts:
         created:
           id: created
@@ -265,7 +231,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: MyDisplay
+      title: 'photo gallery'
       header: {  }
       footer: {  }
       empty: {  }
@@ -277,12 +243,11 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_pimage'
   page_1:
     display_plugin: page
     id: page_1
@@ -290,19 +255,18 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: mydisplay
+      path: photo-gallery
       menu:
         type: normal
-        title: MyDisplay
+        title: 'photo gallery'
         menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_pimage'
