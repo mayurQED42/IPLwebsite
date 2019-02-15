@@ -1,0 +1,9 @@
+uuid: 1d837771-9268-4831-baaa-c204ac724f51
+langcode: en
+status: true
+dependencies: {  }
+name: cuisine
+vid: cuisine
+description: 'which country it belongs.'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,29 @@
+uuid: 839fa808-1ff5-4d37-8383-f4f9df88d1a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_ugroup
+    - node.type.group
+  module:
+    - user
+id: user.user.field_ugroup
+field_name: field_ugroup
+entity_type: user
+bundle: user
+label: ugroup
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      group: group
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
