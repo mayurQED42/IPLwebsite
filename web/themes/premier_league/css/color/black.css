@@ -1,0 +1,63 @@
+body{
+  background: none repeat scroll 0 0 #242424;
+  color: #fff;
+}
+body .navbar{
+  background: none repeat scroll 0 0 #0f0f0f ;
+  border-bottom: 1px solid #0f0f0f;
+}
+body .navbar .container a{
+  font-size: 16px;
+}
+
+.dropdown.open,.dropdown.open ul{
+  background-color: #0f0f0f;
+}
+
+
+/* selected menu background*/
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+  color: #fff;
+  background-color: #C2043E;
+}
+/* sub menu background */
+body .navbar  .container ul li ul li, body .navbar  .container ul li ul{
+  background-color:#C2043E ;
+}
+
+/* sub menu hover */
+body .navbar  .container ul li ul li a:hover{background-color:#CB8265 ;}
+
+
+.col-md-3 .panel-heading,.panel-heading {
+  padding:0px;
+}
+.col-md-3 .poll h3{
+  background-color: #0f0f0f;
+}
+.col-md-9 h3,.col-md-3 .panel-heading h3,.col-md-9 h2 ,.col-md-3 h2,.row .boxblock h2{
+  background-color:  #0f0f0f;
+  border-color:  #0f0f0f;
+  color: #FFF;
+
+}
+input[type="submit"]{
+  background-color: #0f0f0f;
+  border-color: #0f0f0f;
+}
+.breadcrumb {
+  background-color:#0f0f0f;
+}
+.breadcrumb  a{
+  color:#ffffff;
+  font: italic bold ;
+}
+footer h3{
+  color: #FF8;
+}
+footer 
+{
+  background: none repeat scroll 0 0 #1b1b1b;
+
+}
+.footer_col .footer_column ul li a{color:#ffffff}

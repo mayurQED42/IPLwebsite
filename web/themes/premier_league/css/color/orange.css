@@ -1,0 +1,65 @@
+body{
+  background:#cccc00; 
+}
+body .navbar{
+  background-color: #FF9900 ;
+  border-bottom: 1px solid #FF9900;
+}
+body .navbar .container a{
+  font-size: 16px;
+}
+.dropdown.open,.dropdown.open ul{
+  background-color:#FF9900;
+}
+/* selected menu background*/
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+  color: #fff;
+  background-color: #CE7B4D;
+}
+/* sub menu background */
+body .navbar  .container ul li ul li, body .navbar  .container ul li ul{
+  background-color:#CE7B4D ;
+}
+
+/* sub menu hover */
+body .navbar  .container ul li ul li a:hover{background-color:#E19A5A ;}
+
+
+
+.col-md-9 h3,.col-md-3 .panel-heading h3,.col-md-9 h2 ,.col-md-3 h2,.row .boxblock h2{
+  background-color: #E19A5A;
+  border-color: #DEC6F8;
+  color: #000;
+
+}
+input[type="submit"]{
+  background-color: #FF9900;
+  border-color: #FF9900;
+}
+.breadcrumb {
+  background-color:#FF9900;
+}
+.breadcrumb  a{
+  color:#ffffff;
+  font: italic bold ;
+}
+.col-md-3 .panel-heading,.panel-heading {
+  padding:0px;
+}
+.col-md-3 .poll h3{
+  background-color: #FFCC00;
+}
+.col-md-9 h3,.col-md-3 .panel-heading h3,.col-md-9 h2 ,.col-md-3 h2,.row .boxblock h2{
+  background-color: #FFCC00;
+  border-color: #d0fbfb;
+  color: #FFF;
+
+}
+footer h3{
+  color: #FF8;
+}
+footer 
+{
+  background: #FFCC00;
+}
+.footer_col .footer_column ul li a{color:#ffffff}

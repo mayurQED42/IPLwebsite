@@ -1,0 +1,64 @@
+bootstrap:
+  version: VERSION
+  css:
+    theme:
+      includes/bootstrap/css/bootstrap.min.css: { weight: 0 }
+      includes/bootstrap/css/overlay-bootstrap.min.css: {}
+  js:
+    includes/bootstrap/js/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
+global-styling:
+  css:
+    theme:
+      css/style.css: {} 
+      css/premier_league.css: {}
+      fonts/font-awesome/css/font-awesome.min.css: {}	  	
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+responsive-slider:  
+  js:    
+    js/custom.js: {}
+fly-text:	
+  css:
+    theme:
+        css/fly_style.css: {}
+  js:
+    js/fly_style.js: {}	
+color-normal:
+  version: VERSION
+  css:
+     theme:
+      css/color/normal.css: {}
+
+color-green:
+  version: VERSION
+  css:
+     theme:
+         css/color/green.css: {}
+color-blue:
+  version: VERSION
+  css:
+    theme:
+      css/color/blue.css: {}
+
+color-brown:
+  version: VERSION
+  css:
+    theme:
+      css/color/brown.css: {}
+
+color-orange:
+  version: VERSION
+  css:
+    theme:
+      css/color/orange.css: {}
+color-black:
+  version: VERSION
+  css:
+    theme:
+      css/color/black.css: {}

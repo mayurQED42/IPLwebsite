@@ -1,0 +1,297 @@
+<?php
+
+/**
+ * @file
+ * Drupal 8 theme premier_league.
+ */
+
+define('THEME_PATH', base_path() . drupal_get_path('theme', 'premier_league'));
+// Change the value to increase the sideshow.
+define('SLIDESHOW_COUNT', 3);
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_preprocess_HOOK() for page.html.twig.
+ */
+function premier_league_preprocess_page(&$variables) {
+  global $base_root;
+  if (!empty($variables['page']['sidebar_right'])) {
+    $variables['contentsection'] = 'col-md-9';
+    $variables['sidebarright'] = 'col-md-3';
+  }
+  else {
+    $variables['contentsection'] = 'col-md-12';
+  }
+  if (!empty($variables['page']['content_top1']) || !empty($variables['page']['content_top2']) || !empty($variables['page']['content_top3'])) {
+    $variables['widget'] = 'md-column-widget';
+  }
+  else {
+    $variables['widget'] = 'row';
+  }
+  // Add Responsive class for footer.
+  if (!empty($variables['page']['footer_1']) && !empty($variables['page']['footer_2']) && !empty($variables['page']['footer_3']) && !empty($variables['page']['footer_4'])) {
+    $variables['footer_area_class'] = 'col-md-3';
+  }
+  elseif ((!empty($variables['page']['footer_1']) && !empty($variables['page']['footer_2'])) && !empty($variables['page']['footer_3']) or (!empty($variables['page']['footer_1']) && !empty($variables['page']['footer_2']) && !empty($variables['page']['footer_4'])) or (!empty($variables['page']['footer_1']) && !empty($variables['page']['footer_3']) && !empty($variables['page']['footer_4']))or (!empty($variables['page']['footer_2']) && !empty($variables['page']['footer_3']) && !empty($variables['page']['footer_4']))) {
+    $variables['footer_area_class'] = 'col-md-4';
+  }
+  elseif ((!empty($variables['page']['footer_1']) && !empty($variables['page']['footer_2'])) or (!empty($variables['page']['footer_1']) && !empty($variables['page']['footer_3'])) or (!empty($variables['page']['footer_1']) && !empty($variables['page']['footer_4'])) or (!empty($variables['page']['footer_2']) && !empty($variables['page']['footer_3'])) or (!empty($variables['page']['footer_2']) && !empty($variables['page']['footer_4'])) or (!empty($variables['page']['footer_3']) && !empty($variables['page']['footer_4']))) {
+    $variables['footer_area_class'] = 'col-md-6';
+  }
+  else {
+    $variables['footer_area_class'] = 'col-md-12';
+  }
+
+  $color = theme_get_setting('premier_league_color', 'premier_league');
+  $variables['#attached']['library'][] = "premier_league/color-{$color}";
+  if ($variables['is_front']) {
+    $variables['#attached']['library'][] = 'premier_league/responsive-slider';
+    $variables['#attached']['library'][] = 'premier_league/light-box';
+    $variables['#attached']['library'][] = 'premier_league/fly-text';
+  }
+  // Social media global variable.
+  $variables['show_social_icon'] = theme_get_setting('show_social_icon');
+  $variables['facebook_url'] = theme_get_setting('facebook_url');
+  $variables['google_plus_url'] = theme_get_setting('google_plus_url');
+  $variables['twitter_url'] = theme_get_setting('twitter_url');
+  $variables['linkedin_url'] = theme_get_setting('linkedin_url');
+  $variables['pinterest_url'] = theme_get_setting('pinterest_url');
+  $variables['rss_url'] = theme_get_setting('rss_url');
+
+  // Slider global variable.
+  $variables['copyright_text'] = theme_get_setting('copyright_text');
+
+  // Slider global variable.
+  $variables['slideshow_display'] = theme_get_setting('slideshow_display', 'premier_league');
+  $variables['slider'] = array();
+  for ($i = 1; $i <= SLIDESHOW_COUNT; $i++) {
+    $fid = theme_get_setting("slide_image_{$i}", "premier_league");
+    if (!empty($fid)) {
+      $file = file_load($fid[0]);
+      $uri = $file->getFileUri();
+      $image_path = file_create_url($uri);
+    }
+    else {
+      $image_path = $base_root . THEME_PATH . "/images/slider{$i}.jpg";
+    }
+
+    $variables['slider'][] = array(
+      'url' => theme_get_setting("slide_url_{$i}", "premier_league"),
+      'src' => $image_path,
+      'title' => theme_get_setting("slide_title_{$i}", "premier_league"),
+      'alt' => theme_get_setting("slide_alt_title_{$i}", "premier_league"),
+    );
+  }
+  // For fly text.
+  $variables['show_flytext'] = theme_get_setting('show_flytext', "premier_league");
+  $variables['fly_text'] = theme_get_setting('fly_text', "premier_league");
+  $fid_fly = theme_get_setting("fly_image", "premier_league");
+  if (!empty($fid_fly)) {
+    $file_fly = file_load($fid_fly[0]);
+    $uri_fly = $file_fly->getFileUri();
+    $fly_image_path = file_create_url($uri_fly);
+  }
+  else {
+    $fly_image_path = $base_root . THEME_PATH . "/images/fly_img.jpg";
+  }
+
+  $variables['fly_img'] = $fly_image_path;
+}
+
+/**
+ * Implements preprocess block function.
+ */
+function premier_league_preprocess_block(&$variables) {
+  switch ($variables['base_plugin_id']) {
+    case 'system_branding_block':
+      $variables['site_logo'] = '';
+      if ($variables['content']['site_logo']['#access'] && $variables['content']['site_logo']['#uri']) {
+        $variables['site_logo'] = str_replace('.svg', '.png', $variables['content']['site_logo']['#uri']);
+      }
+      break;
+  }
+}
+
+/**
+ * Implements of theme settings alter.
+ */
+function premier_league_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['premier_league_settings'] = array(
+    '#type' => 'details',
+    '#title' => t('Premier League Settings'),
+    '#open' => TRUE,
+  );
+  $form['premier_league_settings']['color'] = array(
+    '#type' => 'details',
+    '#title' => t('Color Switcher'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['premier_league_settings']['color']['premier_league_color'] = array(
+    '#type' => 'select',
+    '#title' => t('Colors'),
+    '#default_value' => theme_get_setting('premier_league_color', 'premier_league'),
+    '#description' => t("Choose any one color from the list"),
+    '#options' => array(
+      'normal' => t('NORMAL'),
+      'green' => t('GREEN'),
+      'blue' => t('BLUE'),
+      'orange' => t('ORANGE'),
+      'brown' => t('BROWN'),
+      'black' => t('BLACK'),
+    ),
+  );
+  // Social links admin configuration.
+  $form['premier_league_settings']['social_icon'] = array(
+    '#type' => 'details',
+    '#title' => t('Social Media Link'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['premier_league_settings']['social_icon']['show_social_icon'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show Social Icons'),
+    '#default_value' => theme_get_setting('show_social_icon'),
+    '#description' => t("Show/Hide social media links"),
+  );
+  $form['premier_league_settings']['social_icon']['facebook_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Facebook Link'),
+    '#default_value' => theme_get_setting('facebook_url'),
+  );
+  $form['premier_league_settings']['social_icon']['google_plus_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Google plus Link'),
+    '#default_value' => theme_get_setting('google_plus_url'),
+  );
+  $form['premier_league_settings']['social_icon']['twitter_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Twitter Link'),
+    '#default_value' => theme_get_setting('twitter_url'),
+  );
+  $form['premier_league_settings']['social_icon']['linkedin_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Linkedin Link'),
+    '#default_value' => theme_get_setting('linkedin_url'),
+  );
+  $form['premier_league_settings']['social_icon']['pinterest_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Pinterest Link'),
+    '#default_value' => theme_get_setting('pinterest_url'),
+  );
+  $form['premier_league_settings']['social_icon']['rss_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('RSS Link'),
+    '#default_value' => theme_get_setting('rss_url'),
+  );
+  // Copyright information admin configuration.
+  $form['premier_league_settings']['copyright'] = array(
+    '#type' => 'details',
+    '#title' => t('Footer Copy Right'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['premier_league_settings']['copyright']['copyright_text'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Copyright Text'),
+    '#default_value' => theme_get_setting('copyright_text'),
+  );
+  // Fly text admin configuration.
+  $form['premier_league_settings']['flytext'] = array(
+    '#type' => 'details',
+    '#title' => t('Flytext'),
+  );
+  $form['premier_league_settings']['flytext']['show_flytext'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show Flytext'),
+    '#default_value' => theme_get_setting('show_flytext', 'premier_league'),
+    '#description' => t("Check this option to show Flyb text in front page. Uncheck to hide."),
+  );
+
+  $form['premier_league_settings']['flytext']['fly_image'] = array(
+    '#type' => 'managed_file',
+    '#title' => t('Fly Image'),
+    '#default_value' => theme_get_setting("fly_image", "premier_league"),
+    '#upload_location' => 'public://',
+  );
+  $form['premier_league_settings']['flytext']['fly_text'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Fly Text'),
+    '#default_value' => theme_get_setting('fly_text'),
+  );
+  // Slider admin configuration.
+  $form['premier_league_settings']['slideshow'] = array(
+    '#type' => 'details',
+    '#title' => t('Slide Show'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['premier_league_settings']['slideshow']['slideshow_display'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show slideshow'),
+    '#default_value' => theme_get_setting('slideshow_display', 'premier_league'),
+    '#description' => t("Check this option to show Slideshow in front page. Uncheck to hide."),
+  );
+  $form['premier_league_settings']['slideshow']['slide'] = array(
+    '#markup' => t('You can change the title, url and image of each slide in the following Slide Setting fieldsets.'),
+  );
+
+  for ($i = 1; $i <= SLIDESHOW_COUNT; $i++) {
+    $form['premier_league_settings']['slideshow']['slide' . $i] = array(
+      '#type' => 'details',
+      '#title' => 'Slide ' . $i,
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+    );
+    $form['premier_league_settings']['slideshow']['slide' . $i]['slide_title_' . $i] = array(
+      '#type' => 'textfield',
+      '#title' => 'Slide ' . $i . ' Title',
+      '#default_value' => theme_get_setting("slide_title_{$i}", "premier_league"),
+    );
+    $form['premier_league_settings']['slideshow']['slide' . $i]['slide_image_' . $i] = array(
+      '#type' => 'managed_file',
+      '#title' => 'Slide ' . $i . ' Image',
+      '#description' => t('Use same size for all the slideshow images(Recommented size : 930 x 320).'),
+      '#default_value' => theme_get_setting("slide_image_{$i}", "premier_league"),
+      '#upload_location' => 'public://',
+    );
+    $form['premier_league_settings']['slideshow']['slide' . $i]['slide_alt_title_' . $i] = array(
+      '#type' => 'textfield',
+      '#title' => 'Slide ' . $i . ' Alt Title',
+      '#default_value' => theme_get_setting("slide_alt_title_{$i}", "premier_league"),
+    );
+    $form['premier_league_settings']['slideshow']['slide' . $i]['slide_url_' . $i] = array(
+      '#type' => 'textfield',
+      '#title' => 'Slide ' . $i . ' URL',
+      '#default_value' => theme_get_setting("slide_url_{$i}", "premier_league"),
+    );
+  }
+
+  // Custom submit to save the file permanent.
+  $form['#submit'][] = 'premier_league_settings_form_submit';
+}
+
+/**
+ * Custom submit handler for integrity settings form.
+ */
+function premier_league_settings_form_submit(array &$form, FormStateInterface $form_state) {
+  $account = \Drupal::currentUser();
+  $values = $form_state->getValues();
+  for ($i = 0; $i <= SLIDESHOW_COUNT; $i++) {
+    if (!empty($values["slide_image_{$i}"])) {
+      $file = file_load($values["slide_image_{$i}"][0]);
+      $file->setPermanent();
+      $file->save();
+      $file_usage = \Drupal::service('file.usage');
+      $file_usage->add($file, 'user', 'user', $account->id());
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function premier_league_preprocess(&$variables, $hook) {
+  $variables['base_path'] = base_path();
+}

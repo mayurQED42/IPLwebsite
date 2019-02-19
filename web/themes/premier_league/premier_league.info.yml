@@ -1,0 +1,33 @@
+# core: 8.x
+type: theme
+name: 'Premier League Theme'
+description: 'Premier League Theme is a Drupal 8 theme build for sports website.'
+
+regions:  
+  header: 'Header'  
+  logo: 'Logo'
+  message: 'Status message'
+  breadcrumb: 'Breadcrumb'
+  content_top1: 'Content Top 1'
+  content_top2: 'Content Top 2'
+  content_top3: 'Content Top 3'
+  title: 'Page Title'
+  content: 'Content'
+  sidebar_right: 'Right Sidebar'
+  content_bottom: 'Content Bottom'
+  footer_sponsored: 'Footer sponsored'
+  footer_1: 'Footer 1'
+  footer_2: 'Footer 2'
+  footer_3: 'Footer 3'
+  footer_4: 'Footer 4'  
+  no_region: 'Not Assigned'  
+
+libraries:
+  - 'premier_league/bootstrap'
+  - 'premier_league/global-styling'
+
+# Information added by Drupal.org packaging script on 2016-05-27
+version: '8.x-1.0'
+core: '8.x'
+project: 'premier_league'
+datestamp: 1464346013

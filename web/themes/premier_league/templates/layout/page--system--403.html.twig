@@ -1,0 +1,93 @@
+{#
+/**
+ * @404 page
+ 
+ */
+#}
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="header-logo">  {{ page.logo }} </div>
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>                
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      {{ page.header }}
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav> 
+<!-- Navigation -->
+
+<!-- Page Content -->
+<div class="container">
+
+  <!-- /.row -->
+  <!-- Intro Content -->
+  <div class="row">
+    <img src="{{ base_path ~ directory }}/images/403.png" class="img-responsive center-block">            
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<div class="container">
+  <hr>
+</div>
+<!-- /.container -->
+<!-- Footer -->       
+
+<footer>	
+  <div class="col-md-12 top-footer_icon">
+    <div class="row">
+      {{ page.footer_sponsored }}	
+    </div>
+  </div>
+  <div class="footergrid wrap-footer">
+    <div class="col-md-12 footer_col">
+      <div class="row">
+        {{ page.footer }}
+      </div>
+    </div>
+  </div>	
+</footer>
+<div class="copyright">		
+  <div class="footergrid wrapper">					
+    {% if copyright_text %}
+      <span class="">{{ copyright_text }}</span>
+    {% endif %}
+
+    {% if show_social_icon %}
+      <ul class="direct-link">
+        {% if facebook_url %}
+          <li><a href="{{ facebook_url }}"  class="facebook" target="_blank" ><i class="fa fa-facebook"></i></a></li>
+            {% endif %}
+            {% if google_plus_url %}
+          <li><a href="{{ google_plus_url }}"  class="google-plus" target="_blank" ><i class="fa fa-google-plus"></i></a></li>
+            {% endif %}
+            {% if twitter_url %}
+          <li><a href="{{ twitter_url }}" class="twitter" target="_blank" ><i class="fa fa-twitter"></i></a></li>
+            {% endif %}
+            {% if linkedin_url %}
+          <li><a href="{{ linkedin_url }}" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            {% endif %}
+            {% if pinterest_url %}
+          <li><a href="{{ pinterest_url }}" class="pinterest" target="_blank" ><i class="fa fa-pinterest"></i></a></li>
+            {% endif %}
+            {% if rss_url %}
+          <li><a href="{{ rss_url }}" class="rss" target="_blank" ><i class="fa fa-rss"></i></a></li>
+            {% endif %}				
+      </ul>
+    {% endif %}
+  </div>		
+</div>
+<!-- Footer End -->	

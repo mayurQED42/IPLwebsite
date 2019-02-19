@@ -1,0 +1,199 @@
+/*!
+ * Start Bootstrap - Premier League Template
+ * Code licensed under the Apache License v2.0.
+ * Responsive Styles
+ */
+
+@media(max-width:991px) {
+  .customer-img,
+  .img-related {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 981px){
+  footer .top-footer_icon{
+    border-bottom: 1px solid #555;
+  }		
+  .col-footer-3 .col-1-3, .col-footer-3 .col-1-3-fixed {
+    width: 33.33%;
+    float:left;
+  }
+  footer .col-footer-3 img {
+    border: 1px solid #555;
+    margin-bottom: 20px;
+    padding: 5px;
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+  }
+
+  .col-footer-3 .col-1-3, .col-footer-3 .col-1-3-fixed {
+    width: 33.33%;
+    float:left;
+  }
+
+  .copyright ul.direct-link {
+    float: right;
+  }
+}
+@media only screen and (min-width: 979px) and (max-width: 980px){
+  footer .top-footer_icon .col-md-3.col-1-5 
+  { 	
+    float:left;
+    width: 25%;
+    border-bottom: medium none;
+  }
+  footer .top-footer_icon .col-md-3.col-1-5 img
+  { 	
+    width: 100%;		
+  }
+  footer .top-footer_icon{
+    border-bottom: 1px solid #555;
+  }
+  footer .col-footer-3 img {
+    border: 1px solid #555;
+    margin-bottom: 20px;
+    padding: 5px;
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+  }
+
+}
+@media only screen and (min-width: 639px) and (max-width: 800px) {
+  .col-md-9 img{
+    width:90%;
+  }
+  .col-md-3 .item-list li{
+    max-height: 300px;
+  }
+  .container.top_content{margin: 5% 0;position:inherit;}
+  .direct-link{float:right;}
+
+  footer .top-footer_icon .col-md-3.col-1-5 
+  { 	
+    float:left;
+    width: 50%;
+    border-bottom: medium none;
+  }
+  footer .top-footer_icon .col-md-3.col-1-5 img
+  { 	
+    width: 100%;		
+  }
+  footer .top-footer_icon{
+    border-bottom: 1px solid #555;
+  }
+
+  /* footer flicker image */
+  footer .col-footer-3 img {
+    border: 1px solid #555;
+    margin-bottom: 20px;
+    padding: 5px;
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+  }
+  .col-footer-3 .footer_column .row .col-1-3 {
+    float: left;
+    margin-left: 2.5%;
+    width: 30%;
+  }
+}
+@media(max-width:767px) {
+  .img-portfolio {
+    margin-bottom: 15px;
+  }
+
+  header.carousel .carousel {
+    height: 70%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  footer .top-footer_icon .col-md-3.col-1-5 
+  { 	
+    width: 100%;		
+  }
+  footer .top-footer_icon .col-md-3.col-1-5 img
+  { 	
+    width: 100%;		
+  }
+  footer .top-footer_icon{
+    border-bottom: 1px solid #555;
+  }
+
+  /* footer flicker image */
+  footer .col-footer-3 img {
+    border: 1px solid #555;
+    margin-bottom: 20px;
+    padding: 5px;
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+  }
+}
+/*  GO FULL WIDTH BELOW 480 PIXELS  IPHONE */
+@media only screen and (min-width: 319px) and ( max-width: 480px) {
+  .views-col{width:100% !important;}
+  .col-md-9 img{
+    width:100%;
+    height:100%;
+  }
+  .col-md-3 .item-list li{
+    min-height: 100px;
+    max-height: 300px;
+  }
+  .container .row .views-col img{
+    width:100%;
+    height:100%;
+  }
+  .direct-link{float:right;}
+  footer .top-footer_icon .col-md-3.col-1-5 
+  { 	
+    width: 100%;		
+  }
+  footer .top-footer_icon .col-md-3.col-1-5 img
+  { 	
+    width: 100%;		
+  }
+  footer .top-footer_icon{
+    border-bottom: 1px solid #555;
+  }
+
+  /* Footer Flicker image */	
+
+  footer .col-footer-3 img {
+    border: 1px solid #555;
+    margin-bottom: 20px;
+    padding: 5px;
+    margin: 0 10px 10px 0;
+    max-width: 70%;
+  }
+  .col-footer-3 .col-1-3, .col-footer-3 .col-1-3-fixed {
+    float: none;			
+  }
+
+  .copyright{ text-align: center;}		
+  .copyright ul.direct-link {float: none;margin-top: 10px;}
+
+}
+.no-padding-left {
+  padding-left: 0px;
+}
+.header-logo {
+  float: left;
+}
+/* landing page content */
+.quickedit-field p {
+  margin: 10px 0 10px;
+}
+.panel-heading {
+  padding: 0px;
+}
+/* landing page image and title*/
+.field-content img { border: 2px solid #565252 }
+.field-content  a{ padding-left: 0px; }
+
+/* footer */
+.copyright .wrapper {
+  padding: 15px;
+}

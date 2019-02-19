@@ -1,0 +1,29 @@
+# Default settings should not be located here. This file is only used to
+# override existing settings. If your theme is the one that introduces a new
+# theme setting, it should use the Drupal Bootstrap base theme's
+# @BootstrapSetting annotation discovery process. This ensures that sub-theme
+# settings are inherited from base themes themes properly and to determine when
+# a setting should be saved to config as "overridden".
+#
+# @see \Drupal\bootstrap\Plugin\SettingBase
+# @see \Drupal\bootstrap\Plugin\SettingInterface
+# @see \Drupal\bootstrap\Plugin\SettingManager
+# @see \Drupal\bootstrap\Plugin\Form\SystemThemeSettings
+# @see \Drupal\bootstrap\ThemeSettings
+copyright_text: 'Footer copyright'
+slideshow_display: 1
+slideshow_display: '3'
+slide_title_1: 'What We Do 1'
+slide_title_2: 'Who We Are 2'
+slide_title_3: 'Our Service 3'
+slide_url_1: ''
+slide_url_2: ''
+slide_url_3: ''
+show_social_icon: 5
+facebook_url: 'https://www.facebook.com'
+google_plus_url: 'https://plus.google.com'
+twitter_url: 'https://twitter.com'
+linkedin_url: 'https://www.linkedin.com'
+pinterest_url: 'https://www.pinterest.com'
+fly_text: 'Test fly text'
+show_flytext: 1

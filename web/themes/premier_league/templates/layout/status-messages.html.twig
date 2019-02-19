@@ -1,0 +1,23 @@
+{% extends "@classy/misc/status-messages.html.twig" %}
+{#
+/**
+ * @file
+ * Default theme implementation for status messages.
+ *
+ * Displays status, error, and warning messages, grouped by type.
+ *
+ * Available variables:
+ * - message_list: List of messages to be displayed, grouped by type.
+ * - status_headings: List of all status types.
+ * - display: (optional) May have a value of 'status' or 'error' when only
+ *   displaying messages of that specific type.
+ */
+#}
+{% block messages %}
+  {% if message_list is not empty %}
+    {{ attach_library('premier_league/global-styling') }}
+    <div class="messages__wrapper layout-container">
+      {{ parent() }}
+    </div>
+  {% endif %}
+{% endblock messages %}

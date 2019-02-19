@@ -1,0 +1,17 @@
+langcode: en
+status: True
+dependencies:
+  theme:
+    - premier_league
+id: premier_league_page_title
+theme: premier_league
+region: title
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
