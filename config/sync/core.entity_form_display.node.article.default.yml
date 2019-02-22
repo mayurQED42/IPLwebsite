@@ -5,13 +5,20 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_acountry
+    - field.field.node.article.field_features_video
+    - field.field.node.article.field_gallery
     - field.field.node.article.field_image
+    - field.field.node.article.field_name
     - field.field.node.article.field_tags
     - image.style.thumbnail
     - node.type.article
   module:
     - comment
+    - content_moderation
     - image
+    - media_library
+    - metatag
     - path
     - text
 _core:
@@ -42,6 +49,27 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_acountry:
+    weight: 124
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_features_video:
+    weight: 121
+    settings: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_gallery:
+    type: media_library_widget
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_image:
     type: image_image
     weight: 4
@@ -50,6 +78,12 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_name:
+    weight: 123
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   field_tags:
     type: entity_reference_autocomplete_tags
     weight: 3
@@ -58,6 +92,12 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
     third_party_settings: {  }
   path:
     type: path

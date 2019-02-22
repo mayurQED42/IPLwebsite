@@ -1,0 +1,31 @@
+uuid: fda61cb3-2002-4873-b436-1307a526f25b
+langcode: en
+status: true
+dependencies: {  }
+id: manager
+label: manager
+weight: 6
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access in-place editing'
+  - 'administer content types'
+  - 'administer node display'
+  - 'administer node form display'
+  - 'administer nodes'
+  - 'administer views'
+  - 'bypass node access'
+  - 'delete all revisions'
+  - 'delete any blog content'
+  - 'delete book revisions'
+  - 'delete own blog content'
+  - 'edit any blog content'
+  - 'edit own blog content'
+  - 'revert all revisions'
+  - 'revert blog revisions'
+  - 'use qed42workflow transition publish'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view blog revisions'
+  - 'view latest version'
+  - 'view own unpublished content'

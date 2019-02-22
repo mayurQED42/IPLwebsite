@@ -5,8 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.field_meta_tag
     - node.type.page
   module:
+    - metatag
     - text
     - user
 _core:
@@ -19,12 +21,26 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 100
+    weight: 1
     region: content
     settings:
       trim_length: 600
     third_party_settings: {  }
-  links:
-    weight: 101
+  field_meta_tag:
+    type: metatag_empty_formatter
+    weight: 3
     region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  flag_bookmark:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

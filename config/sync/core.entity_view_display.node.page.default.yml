@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_meta_tag
     - node.type.page
   module:
+    - metatag
     - text
     - user
 _core:
@@ -22,6 +24,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_meta_tag:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  flag_bookmark:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 101
     region: content

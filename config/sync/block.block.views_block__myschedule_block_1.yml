@@ -11,7 +11,7 @@ dependencies:
 id: views_block__myschedule_block_1
 theme: bartik
 region: sidebar_first
-weight: 0
+weight: -7
 provider: null
 plugin: 'views_block:myschedule-block_1'
 settings:

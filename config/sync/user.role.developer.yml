@@ -1,0 +1,20 @@
+uuid: 98290463-ed45-4002-9a91-f96f69f15705
+langcode: en
+status: true
+dependencies: {  }
+id: developer
+label: developer
+weight: 5
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access in-place editing'
+  - 'create blog content'
+  - 'delete any blog content'
+  - 'delete own blog content'
+  - 'edit any blog content'
+  - 'edit own blog content'
+  - 'use qed42workflow transition create_new_draft'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'

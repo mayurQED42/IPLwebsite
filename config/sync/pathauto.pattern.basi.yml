@@ -1,0 +1,22 @@
+uuid: 8bb412e2-276c-4963-ae16-83e23bb2c9f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: basi
+label: 'basic page'
+type: 'canonical_entities:node'
+pattern: 'page/[node:title]/[node:author]'
+selection_criteria:
+  77cec3dc-08a2-408e-ac83-e2e9d9437882:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 77cec3dc-08a2-408e-ac83-e2e9d9437882
+selection_logic: and
+weight: -5
+relationships: {  }
