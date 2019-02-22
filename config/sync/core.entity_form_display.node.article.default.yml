@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_acountry
+    - field.field.node.article.field_description
     - field.field.node.article.field_features_video
     - field.field.node.article.field_gallery
     - field.field.node.article.field_image
@@ -19,6 +20,7 @@ dependencies:
     - image
     - media_library
     - metatag
+    - paragraphs
     - path
     - text
 _core:
@@ -39,18 +41,18 @@ content:
     third_party_settings: {  }
   comment:
     type: comment_default
-    weight: 20
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_acountry:
-    weight: 124
+    weight: 16
     settings:
       match_operator: CONTAINS
       size: 60
@@ -58,15 +60,27 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_description:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_features_video:
-    weight: 121
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: media_library_widget
     region: content
   field_gallery:
     type: media_library_widget
-    weight: 122
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -79,7 +93,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
   field_name:
-    weight: 123
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
@@ -95,13 +109,13 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 11
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -109,21 +123,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 7
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 12
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 8
     region: content
     third_party_settings: {  }
   title:

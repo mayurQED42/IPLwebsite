@@ -3,6 +3,7 @@ module:
   admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
   automated_cron: 0
+  backup_migrate: 0
   big_pipe: 0
   blazy: 0
   blazy_ui: 0
@@ -24,7 +25,10 @@ module:
   devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_reference_revisions: 0
   field: 0
+  field_group: 0
+  field_group_migrate: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -45,6 +49,7 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  paragraphs_type_permissions: 0
   path: 0
   quickedit: 0
   rdf: 0
@@ -68,6 +73,7 @@ module:
   menu_link_content: 1
   pathauto: 1
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
   stable: 0
