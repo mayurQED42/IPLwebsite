@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_image1
     - field.field.node.page.field_meta_tag
+    - image.style.thumbnail
     - node.type.page
   module:
     - content_moderation
+    - image
     - metatag
     - path
     - text
@@ -33,6 +36,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_image1:
+    weight: 122
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_meta_tag:
     weight: 121
     settings: {  }

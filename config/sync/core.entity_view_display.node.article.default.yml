@@ -20,6 +20,8 @@ dependencies:
     - entity_reference_revisions
     - field_group
     - image
+    - layout_builder
+    - layout_discovery
     - metatag
     - text
     - user
@@ -74,6 +76,10 @@ third_party_settings:
         description: ''
       label: part2
       region: content
+  layout_builder:
+    sections: {  }
+    allow_custom: false
+    enabled: false
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
 id: node.article.default
