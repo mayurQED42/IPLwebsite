@@ -1,0 +1,5 @@
+name: My Form
+type: module
+description: created form for user information
+package: custom
+core: 8.x

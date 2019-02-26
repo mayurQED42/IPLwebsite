@@ -1,0 +1,15 @@
+myform.configform:
+  path: /myform
+  defaults:
+    _title: 'config form'
+    _form: 'Drupal\myform\Form\Myform'
+  requirements:
+    _permission: 'administer site configuration'  
+
+myform.simpleform:
+  path: /newform
+  defaults:
+    _title: 'normal form'
+    _form: 'Drupal\myform\Form\SimpleForm'
+  requirements:
+    _permission: 'administer site configuration'  
