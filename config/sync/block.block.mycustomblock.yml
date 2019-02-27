@@ -1,0 +1,20 @@
+uuid: 1f54a116-bec1-4c66-bb99-19e594c9dc56
+langcode: en
+status: true
+dependencies:
+  module:
+    - myform
+  theme:
+    - bartik
+id: mycustomblock
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: my_block
+settings:
+  id: my_block
+  label: 'My Customblock'
+  provider: myform
+  label_display: visible
+visibility: {  }
