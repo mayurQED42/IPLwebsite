@@ -1,0 +1,4 @@
+access hello route:
+  title: 'Access Hello Route'
+  description: 'my custom module:mytest permission'
+  restrict access: TRUE

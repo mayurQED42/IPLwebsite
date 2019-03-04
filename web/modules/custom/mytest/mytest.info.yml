@@ -1,0 +1,5 @@
+name: My Test
+type: module
+description: created form for testing
+package: custom
+core: 8.x

@@ -1,10 +1,10 @@
 <?php
 
-namespace Drupal\myform\Controller;
+namespace Drupal\mytest\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 
-class MyController extends ControllerBase {
+class SimpleController extends ControllerBase {
     public function content() {
         return [
           '#type' => 'markup',

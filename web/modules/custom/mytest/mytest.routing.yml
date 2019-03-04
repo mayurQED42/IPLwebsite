@@ -1,0 +1,25 @@
+mytest.simple:
+  path: /hello_world
+  defaults:
+    _title: 'simple form'
+    _controller: 'Drupal\mytest\Controller\SimpleController::content'
+  requirements:
+    _permission: 'access hello route'  
+
+mytest.upcasting:
+  path: '/hellonode/{node}'
+  defaults:
+    _title: 'upcasting form'
+    _controller: 'Drupal\mytest\Controller\UpcastingController::content'
+  requirements:
+    _permission: 'administer site configuration'
+
+mytest.dynamic:
+  path: '/hello/{name}'
+  defaults:
+    _title: 'dynamic form'
+    _controller: 'Drupal\mytest\Controller\DynamicController::content'
+  requirements:
+    _permission: 'administer site configuration'
+    name: '[a-zA-Z]+'
+
