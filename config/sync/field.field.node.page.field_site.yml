@@ -1,0 +1,21 @@
+uuid: 7fc06df0-ed79-4602-99f9-398327730893
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site
+    - node.type.page
+  module:
+    - text
+id: node.page.field_site
+field_name: field_site
+entity_type: node
+bundle: page
+label: site
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -13,7 +13,7 @@ class UpcastingController extends ControllerBase {
     $author_name1 = $author->getUsername();
     return array(
       '#type' => 'markup',
-      '#markup' => t('Hello @author_name', array('@author_name' => $author_name1)),
+      '#markup' => $this->t('Hello @author_name', array('@author_name' => $author_name1)),
     );
   }
 }

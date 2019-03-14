@@ -4,8 +4,20 @@ namespace Drupal\myform\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Logger\LoggerChannelFactory;
 
 class SimpleForm extends FormBase {
+    protected $loggerFactory;
+    /**
+    * Constructor.
+    */
+    public function __construct(LoggerChannelFactory $loggerFactory) {
+        $this->loggerFactory = $loggerFactory->get('myform');
+      }
+    public static function create(ContainerInterface $container){
+        return new static ($container->get('logger.factory'));
+      }  
     public function getFormId() {
         return 'simpleform';
       }
@@ -47,9 +59,16 @@ class SimpleForm extends FormBase {
         //     drupal_set_message($key . ': ' . $value);
         //   }
         //drupal_set_message('name : ' . $form_state->getValue('name'));
+        // $message = 'My form: <pre>' . var_dump($form, TRUE);
+        // \Drupal::logger('my_module')->notice($message);
+        $this->loggerFactory->notice('name :' . $form_state->getValue('name') . '<br>dob :' . $form_state->getValue('dob') . '<br>candidate_gender :' . $form_state->getValue('candidate_gender'));
         $this->messenger()->addMessage($this->t('name : ' . $form_state->getValue('name')));
         $this->messenger()->addMessage($this->t('dob : ' . $form_state->getValue('dob')));
         $this->messenger()->addMessage($this->t('gender : ' . $form_state->getValue('candidate_gender')));
+        // $this->logger->get('name')->notice($form_state->getValue('name'));
+        // $this->logger->get('dob')->notice($form_state->getValue('dob'));
+        // $this->logger->get('candidate_gender')->notice($form_state->getValue('candidate_gender'));
+
           
       }
 }
