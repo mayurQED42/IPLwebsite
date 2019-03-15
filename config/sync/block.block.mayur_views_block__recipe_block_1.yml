@@ -1,0 +1,25 @@
+uuid: 98d52402-5bb1-484e-8d73-e6138ad1c9fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recipe
+  module:
+    - views
+  theme:
+    - mayur
+id: mayur_views_block__recipe_block_1
+theme: mayur
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:recipe-block_1'
+settings:
+  id: 'views_block:recipe-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }

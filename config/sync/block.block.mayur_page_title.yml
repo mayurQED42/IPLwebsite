@@ -1,0 +1,20 @@
+uuid: 3f5f10d9-aadb-4cd5-a514-56302c184d18
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mayur
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: mayur_page_title
+theme: mayur
+region: content
+weight: -12
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

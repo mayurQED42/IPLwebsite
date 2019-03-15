@@ -1,0 +1,22 @@
+uuid: 71ec2150-49e1-4d3e-b1c2-ed5299c7356b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nexus
+_core:
+  default_config_hash: z_6jqgQjoyjXj_tNTbALNz7CpFjqbI2sT4JtKBpEtoo
+id: testingtheme_content
+theme: nexus
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

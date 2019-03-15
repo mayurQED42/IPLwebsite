@@ -1,0 +1,23 @@
+uuid: 7fd5f899-2f4f-41bc-8c75-612931437fc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.myteam
+  module:
+    - views
+  theme:
+    - mayo
+id: mayo_exposedformmyteampage_1
+theme: mayo
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'views_exposed_filter_block:myteam-page_1'
+settings:
+  id: 'views_exposed_filter_block:myteam-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility: {  }

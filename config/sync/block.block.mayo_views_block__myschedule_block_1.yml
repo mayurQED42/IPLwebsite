@@ -1,0 +1,24 @@
+uuid: a8fbe7f3-209a-426e-b7ee-eaba26de0fb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.myschedule
+  module:
+    - views
+  theme:
+    - mayo
+id: mayo_views_block__myschedule_block_1
+theme: mayo
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'views_block:myschedule-block_1'
+settings:
+  id: 'views_block:myschedule-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

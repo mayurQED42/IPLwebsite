@@ -1,0 +1,23 @@
+uuid: b70cafe3-5e93-4fb5-8b24-79a153ea244f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.myteam
+  module:
+    - views
+  theme:
+    - mayur
+id: mayur_exposedformmyteampage_1
+theme: mayur
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'views_exposed_filter_block:myteam-page_1'
+settings:
+  id: 'views_exposed_filter_block:myteam-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility: {  }

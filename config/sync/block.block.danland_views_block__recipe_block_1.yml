@@ -1,0 +1,25 @@
+uuid: 5d43da3f-ec8f-4221-adb0-b79e100d9cf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recipe
+  module:
+    - views
+  theme:
+    - danland
+id: danland_views_block__recipe_block_1
+theme: danland
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:recipe-block_1'
+settings:
+  id: 'views_block:recipe-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }

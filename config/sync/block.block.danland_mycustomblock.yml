@@ -1,0 +1,20 @@
+uuid: afd32eb9-9fb5-4d17-b9f3-859af5246581
+langcode: en
+status: true
+dependencies:
+  module:
+    - myform
+  theme:
+    - danland
+id: danland_mycustomblock
+theme: danland
+region: sidebar_second
+weight: 0
+provider: null
+plugin: my_block
+settings:
+  id: my_block
+  label: 'My Customblock'
+  provider: myform
+  label_display: visible
+visibility: {  }

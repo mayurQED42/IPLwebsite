@@ -1,0 +1,30 @@
+uuid: 30c6b123-677c-4706-88b9-3264a043b0b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.user_buddies
+  module:
+    - system
+    - views
+  theme:
+    - danland
+id: danland_views_block__user_buddies_block_1
+theme: danland
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:user_buddies-block_1'
+settings:
+  id: 'views_block:user_buddies-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }

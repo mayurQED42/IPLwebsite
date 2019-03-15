@@ -1,0 +1,33 @@
+uuid: c971fc9c-d671-4b18-b9c1-55b55abbec2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.developerblog
+  module:
+    - node
+    - views
+  theme:
+    - mayur
+id: mayur_views_block__developerblog_block_1
+theme: mayur
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:developerblog-block_1'
+settings:
+  id: 'views_block:developerblog-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

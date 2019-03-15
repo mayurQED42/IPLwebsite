@@ -1,0 +1,26 @@
+uuid: 6cefc342-23b7-4e0c-a82b-d4c8cb8f05b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - nexus
+_core:
+  default_config_hash: yUk_12Myd9d0_fbtOLIRCdSpIAQqf35Dp0tl4ECobd4
+id: testingtheme_tools
+theme: nexus
+region: sidebar_first
+weight: 30
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

@@ -1,0 +1,24 @@
+uuid: eb797125-74ad-4aec-81a0-a853ef0a7483
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.myschedule
+  module:
+    - views
+  theme:
+    - mayur
+id: mayur_views_block__myschedule_block_1
+theme: mayur
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'views_block:myschedule-block_1'
+settings:
+  id: 'views_block:myschedule-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

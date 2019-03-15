@@ -1,0 +1,24 @@
+uuid: 76611cca-2aeb-4d83-88b0-a79194df70e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.team_slideshow
+  module:
+    - views
+  theme:
+    - danland
+id: danland_views_block__team_slideshow_block_1
+theme: danland
+region: sidebar_first
+weight: -11
+provider: null
+plugin: 'views_block:team_slideshow-block_1'
+settings:
+  id: 'views_block:team_slideshow-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 61ee4057-5774-420e-9b93-dfa01c2fb8f2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mayo
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: mayo_local_actions
+theme: mayo
+region: content
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

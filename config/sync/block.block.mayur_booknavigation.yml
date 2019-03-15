@@ -1,0 +1,21 @@
+uuid: 9dbbe6d7-cc3e-4b67-9b77-02327ca73a57
+langcode: en
+status: true
+dependencies:
+  module:
+    - book
+  theme:
+    - mayur
+id: mayur_booknavigation
+theme: mayur
+region: sidebar_second
+weight: 0
+provider: null
+plugin: book_navigation
+settings:
+  id: book_navigation
+  label: 'Book navigation'
+  provider: book
+  label_display: visible
+  block_mode: 'all pages'
+visibility: {  }

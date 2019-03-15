@@ -1,0 +1,24 @@
+uuid: 3d4640ce-f1b0-4c48-af7e-f8d606e973c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.myschedule
+  module:
+    - views
+  theme:
+    - danland
+id: danland_views_block__myschedule_block_1
+theme: danland
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'views_block:myschedule-block_1'
+settings:
+  id: 'views_block:myschedule-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

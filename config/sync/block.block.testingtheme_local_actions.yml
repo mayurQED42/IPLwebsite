@@ -1,0 +1,20 @@
+uuid: 502a8393-a1e0-4aea-bf2a-04ed6639c461
+langcode: en
+status: true
+dependencies:
+  theme:
+    - nexus
+_core:
+  default_config_hash: nxloY31aiI76sTa-SQ9Fhs2hm2vIAY97Sg7PALFhBFA
+id: testingtheme_local_actions
+theme: nexus
+region: help
+weight: 20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

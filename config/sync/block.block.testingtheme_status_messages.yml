@@ -1,0 +1,22 @@
+uuid: aba43b8a-9984-4320-9500-435b274d8bb0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nexus
+_core:
+  default_config_hash: uuJqv5a0Ye2s0vh_eY-hZBaTNtjVRlISYdFQjFiZths
+id: testingtheme_status_messages
+theme: nexus
+region: highlighted
+weight: 60
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

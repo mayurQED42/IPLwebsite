@@ -1,0 +1,21 @@
+uuid: bb3d6cb1-8579-49dc-81e1-2f8c657ca346
+langcode: en
+status: true
+dependencies:
+  module:
+    - book
+  theme:
+    - danland
+id: danland_booknavigation
+theme: danland
+region: sidebar_second
+weight: 0
+provider: null
+plugin: book_navigation
+settings:
+  id: book_navigation
+  label: 'Book navigation'
+  provider: book
+  label_display: visible
+  block_mode: 'all pages'
+visibility: {  }

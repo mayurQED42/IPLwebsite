@@ -1,0 +1,22 @@
+uuid: cd19b116-f374-467c-905c-d2a41414883c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nexus
+_core:
+  default_config_hash: 5vdh7auRpwsadg7Uv0MmH7mJ8b4yTQm0ePC1vxjqj-A
+id: testingtheme_powered
+theme: nexus
+region: footer_second
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: d4d6db1a-1671-4fba-938b-faacd6353dd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.myteam
+  module:
+    - views
+  theme:
+    - danland
+id: danland_exposedformmyteampage_1
+theme: danland
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'views_exposed_filter_block:myteam-page_1'
+settings:
+  id: 'views_exposed_filter_block:myteam-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility: {  }
