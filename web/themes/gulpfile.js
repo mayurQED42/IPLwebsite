@@ -4,7 +4,7 @@ var sass = require('gulp-sass');
 gulp.task('default', defaultTask);
 
 function defaultTask(done) {
-  return gulp.src('custom/mayur/sass/header.scss') // Gets all files ending with .scss in app/scss and children dirs
+  return gulp.src('custom/mayur/sass/header.scss') 
     .pipe(sass())
     .pipe(gulp.dest('custom/mayur/css'));
   //console.log('Hello mayur');
@@ -13,7 +13,7 @@ function defaultTask(done) {
 }
 
 gulp.task('sass', function() {
-  return gulp.src('custom/mayur/sass/header.scss') // Gets all files ending with .scss in app/scss
+  return gulp.src('custom/mayur/sass/header.scss') 
     .pipe(sass())
     .pipe(gulp.dest('custom/mayur/css'))
    
