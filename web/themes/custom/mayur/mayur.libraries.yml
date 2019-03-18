@@ -4,6 +4,7 @@ global-styling:
     theme:
       css/style.css: {}
       css/colors.css: {}
+      css/header.css: {}
 
 color.preview:
   version: VERSION
