@@ -20,6 +20,6 @@ gulp.task('sass', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('custom/mayur/sass/header.scss', gulp.series('sass'));
+  gulp.watch('custom/mayur/sass/header.scss', gulp.series('default'));
   // watched tasks
 });
