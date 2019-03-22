@@ -1,6 +1,6 @@
 uuid: cebd8933-d145-4c1b-a0b8-068b3395d5a3
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,7 +10,7 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: mayur_messages
 theme: mayur
-region: highlighted
+region: footer
 weight: 0
 provider: null
 plugin: system_messages_block

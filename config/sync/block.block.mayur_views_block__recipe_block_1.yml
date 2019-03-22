@@ -1,6 +1,6 @@
 uuid: 98d52402-5bb1-484e-8d73-e6138ad1c9fc
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.recipe
@@ -10,7 +10,7 @@ dependencies:
     - mayur
 id: mayur_views_block__recipe_block_1
 theme: mayur
-region: sidebar_second
+region: footer
 weight: 0
 provider: null
 plugin: 'views_block:recipe-block_1'

@@ -1,4 +1,4 @@
-uuid: eb797125-74ad-4aec-81a0-a853ef0a7483
+uuid: ef8a0b6d-b0bd-415a-ba70-21613380ed94
 langcode: en
 status: true
 dependencies:
@@ -8,10 +8,10 @@ dependencies:
     - views
   theme:
     - mayur
-id: mayur_views_block__myschedule_block_1
+id: views_block__myschedule_block_1_2
 theme: mayur
 region: sidebar_first
-weight: -7
+weight: 0
 provider: null
 plugin: 'views_block:myschedule-block_1'
 settings:

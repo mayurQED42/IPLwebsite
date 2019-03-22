@@ -1,0 +1,22 @@
+uuid: 73b4aaea-1505-4a4e-a225-835305f75cc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.mytwig
+  module:
+    - text
+id: node.mytwig.body
+field_name: body
+entity_type: node
+bundle: mytwig
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

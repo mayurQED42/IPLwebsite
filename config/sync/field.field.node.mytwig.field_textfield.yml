@@ -1,0 +1,21 @@
+uuid: ed049d3b-baa7-4baa-884c-d61494405a2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_textfield
+    - node.type.mytwig
+  module:
+    - text
+id: node.mytwig.field_textfield
+field_name: field_textfield
+entity_type: node
+bundle: mytwig
+label: textfield
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

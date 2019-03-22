@@ -1,6 +1,6 @@
 uuid: 34735c00-5126-4584-a28c-fcfab7d88fd2
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.tools
@@ -12,7 +12,7 @@ _core:
   default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
 id: mayur_tools
 theme: mayur
-region: sidebar_first
+region: footer
 weight: -8
 provider: null
 plugin: 'system_menu_block:tools'

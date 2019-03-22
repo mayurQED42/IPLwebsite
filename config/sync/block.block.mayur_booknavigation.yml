@@ -1,6 +1,6 @@
 uuid: 9dbbe6d7-cc3e-4b67-9b77-02327ca73a57
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - book
@@ -8,7 +8,7 @@ dependencies:
     - mayur
 id: mayur_booknavigation
 theme: mayur
-region: sidebar_second
+region: footer
 weight: 0
 provider: null
 plugin: book_navigation

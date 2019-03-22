@@ -1,6 +1,6 @@
 uuid: 84797de0-2fbb-4f39-bb6e-9cc6810a1eea
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,7 +10,7 @@ _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: mayur_breadcrumbs
 theme: mayur
-region: breadcrumb
+region: footer
 weight: 0
 provider: null
 plugin: system_breadcrumb_block

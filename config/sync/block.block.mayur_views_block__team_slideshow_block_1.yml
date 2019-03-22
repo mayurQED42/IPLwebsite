@@ -1,6 +1,6 @@
 uuid: c046dccc-4dec-4ddf-a596-33a766f1c326
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.team_slideshow
@@ -10,7 +10,7 @@ dependencies:
     - mayur
 id: mayur_views_block__team_slideshow_block_1
 theme: mayur
-region: sidebar_first
+region: footer
 weight: -11
 provider: null
 plugin: 'views_block:team_slideshow-block_1'

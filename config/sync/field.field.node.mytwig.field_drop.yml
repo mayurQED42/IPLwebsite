@@ -1,0 +1,21 @@
+uuid: 5619a775-69f0-4fb8-9c31-6c488bcf30cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_drop
+    - node.type.mytwig
+  module:
+    - options
+id: node.mytwig.field_drop
+field_name: field_drop
+entity_type: node
+bundle: mytwig
+label: drop
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

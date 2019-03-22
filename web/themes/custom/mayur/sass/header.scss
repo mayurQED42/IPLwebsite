@@ -3,3 +3,28 @@ body.overlay {
   background-color: #fef8dd;
   color:rgb(0, 60, 255);
 }
+
+.wrapper {
+  width: 100%;
+  display: flex; }
+  
+.wrapper{
+  .content-visible {
+  width: 70%;
+  /*overflow: hidden; Removed for Superfish */ }
+  }
+.wrapper{
+  .sidebar-first-visible {
+  width: 30%;
+  /*overflow: hidden; Removed for Superfish */ }
+  }
+
+.right {
+  color:red;
+  text-align: right }
+
+.center {
+  text-align: center }
+
+.left {
+  text-align: left }  

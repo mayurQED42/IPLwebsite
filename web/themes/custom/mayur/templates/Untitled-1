@@ -1,0 +1,14 @@
+{% if (page.sidebar_first) %}
+    <div class="main-content">
+        <div id="sidebar-new" >
+          {{ page.content }}
+        </div>
+        <div id="sidebar-first" >
+          {{ page.sidebar_first }}
+        </div>
+    </div>
+{% else %}
+    <div id="sidebar-new" >
+        {{ page.content }}
+    </div>
+{% endif %}

@@ -2,3 +2,24 @@
 body.overlay {
   background-color: #fef8dd;
   color: #003cff; }
+
+.wrapper {
+  width: 100%;
+  display: flex; }
+
+.wrapper .content-visible {
+  width: 70%;
+  /*overflow: hidden; Removed for Superfish */ }
+
+.wrapper .sidebar-first-visible {
+  width: 30%;
+  /*overflow: hidden; Removed for Superfish */ }
+
+.right {
+  text-align: right; }
+
+.center {
+  text-align: center; }
+
+.left {
+  text-align: left; }

@@ -1,6 +1,6 @@
 uuid: b70cafe3-5e93-4fb5-8b24-79a153ea244f
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.myteam
@@ -10,7 +10,7 @@ dependencies:
     - mayur
 id: mayur_exposedformmyteampage_1
 theme: mayur
-region: sidebar_first
+region: footer
 weight: -9
 provider: null
 plugin: 'views_exposed_filter_block:myteam-page_1'

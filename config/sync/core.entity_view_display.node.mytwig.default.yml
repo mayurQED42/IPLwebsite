@@ -1,0 +1,45 @@
+uuid: 2ac7303c-d2ca-44dc-b65f-eb2b891e0382
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.mytwig.body
+    - field.field.node.mytwig.field_drop
+    - field.field.node.mytwig.field_textfield
+    - node.type.mytwig
+  module:
+    - options
+    - text
+    - user
+id: node.mytwig.default
+targetEntityType: node
+bundle: mytwig
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_drop:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_textfield:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

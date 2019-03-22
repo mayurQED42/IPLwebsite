@@ -1,6 +1,6 @@
 uuid: 3d4613b0-dc40-4407-83ab-01217ce4adee
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.my_article
@@ -10,7 +10,7 @@ dependencies:
     - mayur
 id: mayur_views_block__my_article_block_1
 theme: mayur
-region: sidebar_second
+region: footer
 weight: 0
 provider: null
 plugin: 'views_block:my_article-block_1'

@@ -1,6 +1,6 @@
 uuid: c971fc9c-d671-4b18-b9c1-55b55abbec2b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.developerblog
@@ -11,7 +11,7 @@ dependencies:
     - mayur
 id: mayur_views_block__developerblog_block_1
 theme: mayur
-region: sidebar_second
+region: footer
 weight: 0
 provider: null
 plugin: 'views_block:developerblog-block_1'
