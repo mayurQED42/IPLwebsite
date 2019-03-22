@@ -1,23 +1,9 @@
-<!-- for center alignment -->
-{% if content.field_drop[0]['#markup'] == 'center' %}
-  <div class="center">
+<!-- gets drop down :center/right/left, i.e., selected option -->
+{% set drop = content.field_drop[0]['#markup'] %}
+<!-- for alignment -->
+<div{{ content_attributes.addClass(drop) }}>
   {{ content.field_textfield }}
   </div>
   {{ content.field_drop }}
-{% endif %}  
+ 
 
-<!-- for right alignment -->
-{% if content.field_drop[0]['#markup'] == 'right' %}
-  <div class="right">
-  {{ content.field_textfield }}
-  </div>
-  {{ content.field_drop }}
-{% endif %}  
-
-<!-- for left alignment -->
-{% if content.field_drop[0]['#markup'] == 'left' %}
-  <div class="left">
-  {{ content.field_textfield }}
-  </div>
-  {{ content.field_drop }}
-{% endif %}  
