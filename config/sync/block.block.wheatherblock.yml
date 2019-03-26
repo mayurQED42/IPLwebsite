@@ -1,0 +1,20 @@
+uuid: afae4ed3-0280-4517-86dd-ae65e654e2ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - mwheather
+  theme:
+    - mayur
+id: wheatherblock
+theme: mayur
+region: sidebar_first
+weight: -11
+provider: null
+plugin: wheather_block
+settings:
+  id: wheather_block
+  label: pune
+  provider: mwheather
+  label_display: visible
+visibility: {  }

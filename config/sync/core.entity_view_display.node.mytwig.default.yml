@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.mytwig.body
+    - field.field.node.mytwig.field_background
     - field.field.node.mytwig.field_drop
+    - field.field.node.mytwig.field_heading
     - field.field.node.mytwig.field_textfield
     - node.type.mytwig
   module:
+    - image
     - options
     - text
     - user
@@ -23,12 +26,28 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_background:
+    weight: 104
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   field_drop:
     weight: 103
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_heading:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_textfield:
     weight: 102

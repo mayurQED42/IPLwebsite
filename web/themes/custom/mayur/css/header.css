@@ -23,3 +23,13 @@ body.overlay {
 
 .left {
   text-align: left; }
+
+.bgimg {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  color: yellow; }

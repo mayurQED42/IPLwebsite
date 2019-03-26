@@ -1,9 +1,15 @@
+{{  kint(content) }}
 <!-- gets drop down :center/right/left, i.e., selected option -->
 {% set drop = content.field_drop[0]['#markup'] %}
 <!-- for alignment -->
 <div{{ content_attributes.addClass(drop) }}>
   {{ content.field_textfield }}
-  </div>
-  {{ content.field_drop }}
- 
+</div>
+{{ content.field_drop }}
+
+<!-- sets image url value to variable-->
+{% set bgimg = file_url(content.field_background['#items'].entity.uri.value) %}
+<div class="bgimg" style="background-image: url('{{ bgimg }}');">   
+  {{ content.field_heading }}
+</div>
 

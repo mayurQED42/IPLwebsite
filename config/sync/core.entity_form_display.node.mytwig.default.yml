@@ -4,11 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.mytwig.body
+    - field.field.node.mytwig.field_background
     - field.field.node.mytwig.field_drop
+    - field.field.node.mytwig.field_heading
     - field.field.node.mytwig.field_textfield
+    - image.style.thumbnail
     - node.type.mytwig
   module:
     - content_moderation
+    - image
     - path
     - text
 id: node.mytwig.default
@@ -31,11 +35,27 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_background:
+    weight: 124
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_drop:
     weight: 123
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_heading:
+    weight: 125
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
     region: content
   field_textfield:
     weight: 122

@@ -1,0 +1,3 @@
+services:
+ mwheather.myservice:
+   class: Drupal\mwheather\WheatherService

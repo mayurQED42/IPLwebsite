@@ -1,0 +1,21 @@
+uuid: 6123cb14-951b-4db8-b26f-0e9d60482479
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_heading
+    - node.type.mytwig
+  module:
+    - text
+id: node.mytwig.field_heading
+field_name: field_heading
+entity_type: node
+bundle: mytwig
+label: heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

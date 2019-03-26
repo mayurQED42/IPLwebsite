@@ -1,0 +1,8 @@
+mwheather.configform:
+  path: /wheather
+  defaults:
+    _title: 'config form'
+    _form: '\Drupal\mwheather\Form\MyWheather'
+  requirements:
+    _permission: 'administer site configuration'  
+
