@@ -33,3 +33,27 @@ body.overlay {
   text-align: center;
   background-repeat: no-repeat;
   color: yellow; }
+
+.myblocks{
+  width:100%;
+  height:200px;
+  display:flex;
+}
+
+.myblocks .city{
+  width:50%;
+}
+
+.myblocks .desc{
+  width:50%;
+}
+
+.blockwrapper{
+  width:100%;
+  display:flex;
+}
+
+.blockwrapper .blockchild{
+  width:20%;
+  background-color: red;
+  }

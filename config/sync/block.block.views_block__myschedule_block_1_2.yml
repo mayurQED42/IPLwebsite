@@ -1,6 +1,6 @@
 uuid: ef8a0b6d-b0bd-415a-ba70-21613380ed94
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.myschedule

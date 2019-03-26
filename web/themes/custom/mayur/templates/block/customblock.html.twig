@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * custom block.
+ */
+#}
+
+<div class="myblocks" style="background-image: url('{{ file_url(image) }}');">
+    <div class="city">
+        <h1>{{ city }}</h1>
+    </div>
+    <div class="desc">
+        <h1>{{ description }}</h1>
+    </div>
+</div>
+
+
+<div class="blockwrapper">
+    <div class="blockchild">
+            min temp<h1> {{ temp_min }}</h1>
+    </div>
+    <div class="blockchild">
+            max temp<h1> {{ temp_max }}</h1>
+    </div>
+    <div class="blockchild">
+            pressure<h1> {{ pressure }}</h1>
+    </div>
+    <div class="blockchild">
+            humidity<h1> {{ humidity }}</h1>
+    </div>
+    <div class="blockchild">
+            wind<h1> {{ wind }}</h1>
+    </div>
+</div>

@@ -5,6 +5,7 @@ namespace Drupal\mwheather\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormInterface;
 use Drupal\Component\Serialization\Json;
+use Drupal\Core\Form\FormStateInterface;
 /**
  * Provides a 'wheather form' block.
  *
@@ -16,7 +17,7 @@ use Drupal\Component\Serialization\Json;
  */
 
 class WheatherBlock extends BlockBase{
-    public function build() {
+    public function blockForm() {
         $config = \Drupal::config('mwheather.settings');
         $appids= $config->get('appid');
       
@@ -57,4 +58,5 @@ class WheatherBlock extends BlockBase{
         ];
         return $form;
     }
+    
 }
