@@ -9,7 +9,7 @@ _core:
 id: mayur_local_tasks
 theme: mayur
 region: content
-weight: -11
+weight: -9
 provider: null
 plugin: local_tasks_block
 settings:

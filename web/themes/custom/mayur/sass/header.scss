@@ -41,32 +41,37 @@ body.overlay {
 
 .myblocks{
   width:100%;
-  height:100px;
+  height:200px;
+  color:red;
   display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .myblocks{
   .city{
   width:50%;
-  background-color: pink;
   }
 }
 
 .myblocks{ 
   .desc{
   width:50%;
-  background-color: blue;
   }
 }
 
 .blockwrapper{
   width:100%;
   display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .blockwrapper{ 
   .blockchild{
-  display: inline-block;
-  background-color: red;
+    width:20%;
+    background-color: pink;
   }
 }

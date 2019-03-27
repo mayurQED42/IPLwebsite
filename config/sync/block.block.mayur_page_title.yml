@@ -9,7 +9,7 @@ _core:
 id: mayur_page_title
 theme: mayur
 region: content
-weight: -12
+weight: -10
 provider: null
 plugin: page_title_block
 settings:

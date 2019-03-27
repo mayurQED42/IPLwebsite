@@ -9,7 +9,7 @@ _core:
 id: mayur_local_actions
 theme: mayur
 region: content
-weight: -9
+weight: -7
 provider: null
 plugin: local_actions_block
 settings:

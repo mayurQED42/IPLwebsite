@@ -38,6 +38,10 @@ body.overlay {
   width:100%;
   height:200px;
   display:flex;
+  color:white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .myblocks .city{
@@ -50,10 +54,16 @@ body.overlay {
 
 .blockwrapper{
   width:100%;
+  background-color: pink;
   display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .blockwrapper .blockchild{
   width:20%;
-  background-color: red;
-  }
+  border: 2px solid black;
+  /* border-right: 4px solid black;
+  border-bottom: 4px solid black; */
+}

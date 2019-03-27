@@ -1,14 +1,14 @@
-uuid: 90124f1f-d686-4e8d-9d95-30775326c66f
+uuid: 1e9cfcd3-e5be-458b-bcb7-b71bd3a4c635
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - weather
   theme:
     - mayur
-id: weatherblock
+id: weatherblock_2
 theme: mayur
-region: sidebar_first
+region: content
 weight: -11
 provider: null
 plugin: weather_block
@@ -17,8 +17,8 @@ settings:
   label: 'Weather Block'
   provider: weather
   label_display: visible
-  city: pune
-  description: 'hello punekar'
+  city: mumbai
+  description: 'hello mumbai'
   image:
-    - '64'
+    - '66'
 visibility: {  }
