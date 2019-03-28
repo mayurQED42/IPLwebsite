@@ -34,7 +34,6 @@ class WeatherBlock extends BlockBase {
         return $form;
     }
     public function blockSubmit($form, FormStateInterface $form_state) {
-        
         $c = $form_state->getValues();
         $this->setConfigurationValue('city',$c['city']);
         $this->setConfigurationValue('description',$c['description']);
@@ -44,23 +43,20 @@ class WeatherBlock extends BlockBase {
       }
     public function build() {
         $configs=$this->getConfiguration();
-        //print_r("city : ".$configs['city']);
-        //echo "<br>".$configs['description'];
         
-
+        //gets app id
         $config = \Drupal::config('weather.settings');
         $appids= $config->get('appid');
       
+        //call service and gets information related weather
         $service = \Drupal::service('weather.myservice');
         $ress = $service->get_wheather_data($configs['city']);
         $re = Json::decode($ress);
         
         $image=$configs['image'];
-        //print_r($image);
         $image_uri = \Drupal\file\Entity\File::load($image[0]);
         $image_uri->setPermanent();
         $image_uri->save();
-        //print_r($image_uri->getFileUri());
         
         return array(
             '#theme' => 'weather_block',

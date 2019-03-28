@@ -1,4 +1,4 @@
-uuid: 90124f1f-d686-4e8d-9d95-30775326c66f
+uuid: f653da87-4a65-4428-8ddf-3df150da85f6
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
 id: weatherblock
 theme: mayur
 region: sidebar_first
-weight: -11
+weight: 0
 provider: null
 plugin: weather_block
 settings:
@@ -20,5 +20,5 @@ settings:
   city: pune
   description: 'hello punekar'
   image:
-    - '64'
+    - '69'
 visibility: {  }
